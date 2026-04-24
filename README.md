@@ -1,16 +1,46 @@
-# React + Vite
+# 麻雀DANRAN MVP Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vercel にデプロイ可能な Vite + React のWebアプリプロトタイプです。
 
-Currently, two official plugins are available:
+## 機能範囲
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 個人成績表示
+- ランキング（1種類：平均順位ベース）
+- 対戦履歴
+- ポイント表示
+- 店舗側の簡易管理画面
+  - 会員管理
+  - 対戦入力
+  - ポイント更新
 
-## React Compiler
+## ローカル起動
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## ビルド
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+```
+
+## テスト
+
+```bash
+npm test
+```
+
+## Vercel デプロイ手順
+
+1. このフォルダをGitHubリポジトリへアップロード
+2. Vercelで該当リポジトリをImport
+3. Framework Preset は `Vite`
+4. Build Command は `npm run build`
+5. Output Directory は `dist`
+6. Deploy
+
+## 注意
+
+このプロトタイプは画面・操作フロー確認用です。現在のデータはブラウザ上の状態管理で動作しており、リロードすると初期データに戻ります。本番化時はDB・ログイン・権限管理を追加します。
